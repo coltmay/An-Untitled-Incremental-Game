@@ -1,9 +1,15 @@
+import { purchaseCheck } from "../buying/Store.js";
+
 // Defines main element to begin event bubbling.
 const applicationElement = document.querySelector(".game");
 
 // Assigns base values of clicks and click multipler.
 let clicks = 0;
 let clickMultiplier = 1;
+
+export const getClicks = () => {
+    return clicks;
+}
 
 // Event listener that listens for button click, then updates click value and counter.
 export const clickButton = () => {
@@ -26,12 +32,6 @@ const updateClickCounter = () => {
     counter.innerHTML = `Clicks: ${clicks}`;
 }
 
-// Automatically updates clicks and counter every 1 second.
-export const automaticClickCounter = () => {
-    setInterval(clickCounter, 1000)
-    setInterval(updateClickCounter, 1000)
-}
-
 // Event listener that listens for a change in the multiplier selector, then returns the multiplier to be used.
 export const clickMultiplierSelector = () => {
     applicationElement.addEventListener("change", event => {
@@ -40,4 +40,11 @@ export const clickMultiplierSelector = () => {
             return clickMultiplier;
         }
     })
+}
+
+// Automatically updates every 1 second.  Increments in startGame in main.
+export const update = () => {
+    clickCounter();
+    updateClickCounter();
+    purchaseCheck();
 }
