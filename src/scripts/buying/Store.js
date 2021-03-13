@@ -3,7 +3,7 @@ import { storeDisplay } from "./StoreDisplay.js";
 
 export const purchaseCheck= () => {
     let storedClicks = getClicks();
-    if (storedClicks > 1000){
+    if (storedClicks > 500){
         storeDisplay();
     }
 }
