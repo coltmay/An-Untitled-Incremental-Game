@@ -5,6 +5,7 @@ const applicationElement = document.querySelector(".game");
 
 // Assigns base values of clicks and click multipler.
 let clicks = 0;
+let superClicks = 0;
 let clickMultiplier = 1;
 
 export const getClicks = () => {
@@ -32,6 +33,11 @@ const updateClickCounter = () => {
     counter.innerHTML = `Clicks: ${clicks}`;
 }
 
+const updateSuperClickCounter = () => {
+    const superCounter = document.getElementById("superClickCounter")
+    superCounter.innerHTML = `Super Clicks: ${superClicks}`;
+}
+
 // Event listener that listens for a change in the multiplier selector, then returns the multiplier to be used.
 export const clickMultiplierSelector = () => {
     applicationElement.addEventListener("change", event => {
@@ -46,5 +52,20 @@ export const clickMultiplierSelector = () => {
 export const update = () => {
     clickCounter();
     updateClickCounter();
+    updateSuperClickCounter();
     purchaseCheck();
+}
+
+// Store that allows purchase if clicks are over 500.
+export const purchaseStoreA = () => {
+    applicationElement.addEventListener("click", event => {
+        if (event.target.id === "storeA") {
+            if (clicks > 500) {
+            clicks -= 500;
+            superClicks += 1
+            updateClickCounter();
+            updateSuperClickCounter();
+            }
+        }
+    })
 }
