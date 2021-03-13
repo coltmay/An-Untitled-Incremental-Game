@@ -1,24 +1,10 @@
-const applicationElement = document.querySelector(".game");
+import { clickButton, automaticClickCounter } from "./clicking/Click.js";
 
-let clicks = 0;
-let clickMultiplier = 1;
-
-const clickCounter = () => {
-    applicationElement.addEventListener("click", event => {
-        if (event.target.id === "clickButton") {
-        clicks += clickMultiplier;
-        updateClickCounter();
-        }
-    })
-}
-
-const updateClickCounter = () => {
-    const counter = document.getElementById("clickCounter");
-    counter.innerHTML = `Clicks: ${clicks}`;
-}
 
 const startGame = () => {
-    console.log("The game has started.")
-    clickCounter();
+    console.log("The game has started.");
+    clickButton();
+    automaticClickCounter();
 }
+
 startGame();
