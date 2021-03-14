@@ -11,20 +11,25 @@
 
 #textDisplay {
     width: 30%;
-    text-align: center;
+    text-align: left;
+    padding: 1em;
     background: 
     -webkit-linear-gradient(black, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .interactive {
     width: 30%;
+    height: 900px;
     text-align: center;
+    padding: 1em;
 }
 
 .inventory {
     width: 30%;
+    height: 900px;
     padding: 1em;
 }
 

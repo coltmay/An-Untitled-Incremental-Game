@@ -8,6 +8,7 @@ let clicks = 0;
 let superClicks = 0;
 let clickMultiplier = 1;
 
+// Returns total clicks
 export const getClicks = () => {
     return clicks;
 }

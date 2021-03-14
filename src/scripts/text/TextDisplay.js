@@ -1,8 +1,14 @@
-import { getSystemText } from "./Text.js";
+import { getText } from "./TextNodes.js";
+import { TextAsHTML } from "./TextHTML.js";
 
-const textBlock = document.getElementById("textDisplay")
-const openingText = getSystemText();
+// let textDisplay = [];
 
-export const displayOpeningText = () => {
-    textBlock.innerHTML = openingText[1];
+const textElement = document.getElementById("textDisplay");
+
+export const textBoxArray = () => {
+    let textArray = getText();
+    for (let textObject of textArray) {
+        console.log(textObject.text)
+        textElement.innerHTML += TextAsHTML(textObject);
+    }
 }
