@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.game {
+    padding-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.textDisplay {
+    width: 10%;   
+}
+
+.interactive {
+    width: 10%;   
+}
+
+.inventory {
+    width: 10%;    
+    padding: 1em;
+    border: black solid 1px;
+
+}
+
+.clickCounterContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.superClickCounterContainer {
+    display: flex;
+    justify-content: space-between;
+}

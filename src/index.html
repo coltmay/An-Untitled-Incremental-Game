@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,33 @@
     <link rel="stylesheet" href="./styles/main.css">
     <title>An Untitled Incremental Game</title>
 </head>
+
 <body class="game">
-    <!-- Temporary Button -->
-    <button id="clickButton">Click</button>
-    <!-- Temporary Selector -->
-    <select id="multiplierSelector">
-        <option selected value="1">x1</option>
-        <option value="2">x2</option>
-        <option value="5">x5</option>
-        <option value="10">x10</option>
-        <option value="100">x100</option>
-    </select>
-    <div id="clickCounter">Clicks: 0</div>
-    <div id="superClickCounter">Super Clicks: 0</div>
-    <div id="storeContainer"></div>
     <div id="textDisplay">foobar</div>
+
+    <div class="interactive">
+        <button id="clickButton">Click</button>
+        <!-- Temporary Selector -->
+        <select id="multiplierSelector">
+            <option selected value="1">x1</option>
+            <option value="2">x2</option>
+            <option value="5">x5</option>
+            <option value="10">x10</option>
+            <option value="100">x100</option>
+        </select>
+        <div id="storeContainer"></div>
+    </div>
+    <div class="inventory">
+        <div class="clickCounterContainer">
+            <div>Clicks:</div>
+            <div id="clickCounter">0</div>
+        </div>
+        <div class="superClickCounterContainer">
+            <div>Super Clicks:</div>
+            <div id="superClickCounter">0</div>
+        </div>
+    </div>
 </body>
 <script type="module" src="./scripts/main.js"></script>
+
 </html>

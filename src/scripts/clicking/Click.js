@@ -30,12 +30,12 @@ const clickCounter = () => {
 // Updates click counter based on clicks value.
 const updateClickCounter = () => {
     const counter = document.getElementById("clickCounter");
-    counter.innerHTML = `Clicks: ${clicks}`;
+    counter.innerHTML = clicks;
 }
 
 const updateSuperClickCounter = () => {
     const superCounter = document.getElementById("superClickCounter")
-    superCounter.innerHTML = `Super Clicks: ${superClicks}`;
+    superCounter.innerHTML = superClicks;
 }
 
 // Event listener that listens for a change in the multiplier selector, then returns the multiplier to be used.
