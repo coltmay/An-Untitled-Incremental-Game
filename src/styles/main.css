@@ -9,19 +9,33 @@
     justify-content: space-evenly;
 }
 
-.textDisplay {
-    width: 10%;   
+#textDisplay {
+    width: 30%;
+    text-align: center;
+    background: 
+    -webkit-linear-gradient(black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .interactive {
-    width: 10%;   
+    width: 30%;
+    text-align: center;
 }
 
 .inventory {
-    width: 10%;    
+    width: 30%;
     padding: 1em;
-    border: black solid 1px;
+}
 
+#clickButton {
+    width: 150px;
+    height: 40px;
+}
+
+#storeA {
+    width: 150px;
+    height: 40px;
 }
 
 .clickCounterContainer {
